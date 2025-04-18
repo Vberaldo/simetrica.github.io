@@ -91,7 +91,7 @@ span {
   border-radius: 5px;
   margin-top: 28px;
   grid-column: 2 / 3;
-  
+
 }
 
 .carrossel {
@@ -215,6 +215,7 @@ p {
 @media (max-width: 800px) {
   .projetos-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
   .projetos-titulo {
@@ -247,7 +248,8 @@ p {
     transform: scale(1.2);
   }
 
-  .container {
+  .container,
+  .info {
     grid-column: 1;
     width: 90vw;
     margin: 0 auto;
@@ -255,7 +257,7 @@ p {
   }
 
   .info {
-    margin-left: 20px;
+    justify-self: center;
     text-align: center;
   }
 
@@ -271,20 +273,36 @@ p {
   }
 
   .info p {
-      max-width: 500px;
-      width: 100%;
-      margin: 0 auto; /* ← ESSENCIAL PRA CENTRALIZAR O BLOCO */
-      text-align: center;
-      padding: 0 20px; /* opcional: pra dar respiro nas laterais */
-    
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+
   }
 
 }
 
 @media (max-width: 600px) {
+
+.projetos-bg::after{
+  display: none;
+}
+  
+  .projetos-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
   .projetos-titulo {
     font-size: 2em;
   }
+
+  .container,
+  .info {
+  justify-self: center;
+  text-align: center;
+}
 
   .projetos-imglogo {
     max-width: 85vw;
@@ -306,6 +324,7 @@ p {
 
   .info p {
     font-size: 0.95em;
+
   }
 
   .prev,

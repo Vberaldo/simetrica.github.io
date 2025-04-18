@@ -127,8 +127,14 @@
     .contato-icones {
       justify-content: center;
     }
+  
   }
- 
+
+  @media (max-width: 600px) {
+  .footer-bg::after{
+    display: none;
+  }
+}
 
   @media (max-width: 480px) {
     .footer-bg {

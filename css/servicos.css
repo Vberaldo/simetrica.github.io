@@ -1,4 +1,12 @@
-body, nav, li, ul, a, h2, h3, p, img {
+body,
+nav,
+li,
+ul,
+a,
+h2,
+h3,
+p,
+img {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -9,7 +17,7 @@ body, nav, li, ul, a, h2, h3, p, img {
 .servicos-bg {
   background: #202020;
   position: relative;
-  
+
 }
 
 .servicos-bg::after {
@@ -36,13 +44,14 @@ body, nav, li, ul, a, h2, h3, p, img {
 .servicos {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* responsivo para telas menores */
+  flex-wrap: wrap;
+  /* responsivo para telas menores */
   gap: 32px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
-.servicos > div {
+.servicos>div {
   flex: 1 1 200px;
   text-align: center;
   margin: 0 0 32px 0;
@@ -73,4 +82,10 @@ h5 {
 .servicos p:hover {
   color: #FBFBFB;
   transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .servicos-bg::after {
+    display: none;
+  }
 }

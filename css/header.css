@@ -15,11 +15,11 @@ span {
 }
 
 .header-bg {
-  background: url(../imagens/imagemhome.png) center center no-repeat;
+  background: url(../imagens/imagemhome.webp) center center no-repeat;
   background-size: cover;
   display: block;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
