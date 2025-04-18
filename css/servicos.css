@@ -17,7 +17,7 @@ body, nav, li, ul, a, h2, h3, p, img {
   display: block;
   width: 130px;
   height: 100px;
-  background: url(../imagens/Decoração.svg) no-repeat center;
+  background: url(../imagens/deco.svg) no-repeat center;
   position: absolute;
   top: -50px;
   right: 100px;
