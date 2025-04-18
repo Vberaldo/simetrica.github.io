@@ -10,7 +10,7 @@
     display: block;
     width: 130px;
     height: 100px;
-    background: url(./imagens/Decoração.svg) no-repeat center;
+    background: url(.././imagens/Decoração.svg) no-repeat center;
     position: absolute;
     top: -50px;
     right: 100px;
@@ -63,7 +63,7 @@
     }
   
     .sobrenos-conteudo img {
-      content: url("/imagens/SobreNós/sobrenos\ mobile.jpg");
+      content: url(../imagens/SobreNós/sobrenos\ mobile.jpg);
       border-radius: 5px;
       max-width: 80%;
     }

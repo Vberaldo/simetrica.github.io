@@ -14,7 +14,7 @@ span {
 }
 
 .header-bg {
-  background:  url(../imagens/Imagem\ Home.png) center center no-repeat;
+  background:  url(.././imagens/Imagem\ Home.png) center center no-repeat;
   background-size: cover;
   display: block;
   width: 100vw;
