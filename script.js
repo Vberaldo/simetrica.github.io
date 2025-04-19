@@ -172,11 +172,11 @@ links.forEach(scroll => {
 
   tabMenu.forEach((item, index) => {
     item.addEventListener("click", () => {
-      // Remover classe active de todos
+      
       tabContent.forEach(content => content.classList.remove("active"));
       tabMenu.forEach(img => img.classList.remove("active"));
 
-      // Ativar o conteúdo e a logo clicada
+      
       tabContent[index].classList.add("active");
       item.classList.add("active");
     });
