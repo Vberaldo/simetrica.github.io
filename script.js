@@ -181,3 +181,32 @@ links.forEach(scroll => {
       item.classList.add("active");
     });
   });
+
+
+
+  const slideContainer = document.querySelector(".slide");
+  const slides = document.querySelectorAll(".slide img");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let startX = 0;
+  let endX = 0;
+
+  slideContainer.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  slideContainer.addEventListener("touchend", (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleGesture();
+  });
+
+  function handleGesture() {
+    if (startX - endX > 50) {
+      // Swipe para esquerda → próxima imagem
+      nextBtn.click();
+    } else if (endX - startX > 50) {
+      // Swipe para direita → imagem anterior
+      prevBtn.click();
+    }
+  }
