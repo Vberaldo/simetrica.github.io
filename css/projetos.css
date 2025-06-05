@@ -1,3 +1,4 @@
+/* Reset e básico */
 body,
 nav,
 li,
@@ -11,6 +12,7 @@ img {
   padding: 0;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box; /* para evitar problemas de corte */
 }
 
 img {
@@ -42,8 +44,6 @@ body {
   right: 100px;
 }
 
-
-
 span {
   color: #ED3237;
 }
@@ -70,6 +70,7 @@ span {
   flex-wrap: nowrap;
   gap: 48px;
   transition: transform 0.3s ease, filter 0.3s ease;
+  overflow: visible; /* evita corte das imagens */
 }
 
 .projetos-imglogo img:hover {
@@ -91,7 +92,6 @@ span {
   margin-top: 28px;
   grid-column: 2 / 3;
   cursor: pointer;
-
 }
 
 .carrossel {
@@ -146,9 +146,7 @@ span {
 
 .info {
   grid-column: 3 / -1;
-  /* Ocupa todas as colunas */
   align-items: center;
-  /* Alinha o conteúdo ao centro horizontalmente */
   margin-top: 46px;
   margin-left: 96px;
 }
@@ -187,7 +185,6 @@ p {
   font-weight: bolder;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-  
 }
 
 .js-tabcontent .tab-item {
@@ -204,6 +201,53 @@ p {
 
 .tab-item.active {
   display: contents;
+}
+
+/* Animação Fade-in */
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação botão ao clicar */
+.btn {
+  padding: 10px 20px;
+  border: none;
+  background: #ED3237;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #b72428;
+}
+
+.btn.clicked {
+  animation: btnClickAnim 0.6s ease forwards;
+}
+
+@keyframes btnClickAnim {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 /* Responsividade */
@@ -245,15 +289,12 @@ p {
     margin: 0 auto;
     margin-top: 32px;
     margin-bottom: 32px;
-
   }
 
   .projetos-imglogo img {
     max-width: 90px;
-    /* reduzido */
     height: auto;
     margin-bottom: 20px;
-    /* espaço entre linhas se quebrar */
   }
 
   .projetos-imglogo img.active {
@@ -290,17 +331,14 @@ p {
     margin: 0 auto;
     text-align: center;
     padding: 0 20px;
-
   }
-
 }
 
 @media (max-width: 600px) {
+  .projetos-bg::after {
+    display: none;
+  }
 
-.projetos-bg::after{
-  display: none;
-}
-  
   .projetos-grid {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -312,9 +350,9 @@ p {
 
   .container,
   .info {
-  justify-self: center;
-  text-align: center;
-}
+    justify-self: center;
+    text-align: center;
+  }
 
   .projetos-imglogo {
     max-width: 85vw;
@@ -336,7 +374,6 @@ p {
 
   .info p {
     font-size: 0.95em;
-
   }
 
   .prev,
@@ -349,48 +386,48 @@ p {
   }
 }
 
-  @media (max-width: 440px) {
-    .projetos-titulo {
-      font-size: 1.7em;
-    }
-  
-    .projetos-imglogo {
-      gap: 16px;
-      max-width: 90vw;
-    }
-  
-    .projetos-imglogo img {
-      max-width: 70px;
-      margin-bottom: 0;
-    }
-  
-    .info h3 {
-      font-size: 1.6em;
-    }
-  
-    .info p {
-      font-size: 0.9em;
-      line-height: 1.4;
-    }
-  
-    .prev,
-    .next {
-      background: transparent;
-      font-size: 28px;
-      width: auto;
-      height: auto;
-      padding: 0;
-      top: 45%;
-      transform: translateY(-50%);
-      color: white;
-      z-index: 2;
-    }
-    
-    .prev {
-      left: 5px;
-    }
-    
-    .next {
-      right: 5px;
-    }
+@media (max-width: 440px) {
+  .projetos-titulo {
+    font-size: 1.7em;
   }
+
+  .projetos-imglogo {
+    gap: 16px;
+    max-width: 90vw;
+  }
+
+  .projetos-imglogo img {
+    max-width: 70px;
+    margin-bottom: 0;
+  }
+
+  .info h3 {
+    font-size: 1.6em;
+  }
+
+  .info p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .prev,
+  .next {
+    background: transparent;
+    font-size: 28px;
+    width: auto;
+    height: auto;
+    padding: 0;
+    top: 45%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
+}
