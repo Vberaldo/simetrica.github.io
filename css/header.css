@@ -15,7 +15,7 @@ span {
 }
 
 .header-bg {
-  background: url(../imagens/luxa.org-opacity-changed-._archidea-x-QfIIsMOAuMM-unsplash.jpg) center center no-repeat;
+  background: url(../imagens/img-home.webp) center center no-repeat;
   background-size: cover;
   display: block;
   width: 100vw;
@@ -71,6 +71,7 @@ span {
   font-family: "pridi", Arial, Helvetica, sans-serif;
   font-size: 3em;
   color: #FBFBFB;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 1280px){

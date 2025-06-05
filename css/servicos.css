@@ -17,7 +17,6 @@ img {
 .servicos-bg {
   background: #202020;
   position: relative;
-
 }
 
 .servicos-bg::after {
@@ -38,20 +37,18 @@ img {
   padding-top: 48px;
   margin-bottom: 48px;
   margin-left: 100px;
-
 }
 
 .servicos {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* responsivo para telas menores */
   gap: 32px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
-.servicos>div {
+.servicos > div {
   flex: 1 1 200px;
   text-align: center;
   margin: 0 0 32px 0;
@@ -72,20 +69,33 @@ h5 {
 
 .servicos p {
   font-family: "poppins", Arial, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   color: #D2DADE;
   max-width: 90%;
   margin: 0 auto 24px auto;
   line-height: 1.5;
 }
 
-.servicos p:hover {
-  color: #FBFBFB;
-  transform: scale(1.1);
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+  .servico-titulo {
+    font-size: 2.4em;
+    text-align: center;
+    margin-left: 0;
+    padding-top: 24px;
+    margin-bottom: 32px;
+  }
 }
 
 @media (max-width: 600px) {
   .servicos-bg::after {
     display: none;
+  }
+
+  .servico-titulo {
+    font-size: 2em;
+    padding-top: 16px;
+    margin-bottom: 24px;
   }
 }

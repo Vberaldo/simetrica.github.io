@@ -1,162 +1,219 @@
 .footer-bg {
-    background: #202020;
-    color: #f3f3f3;
-    padding: 48px 100px 0;
-    position: relative;
+  background: #202020;
+  color: #f3f3f3;
+  padding: 48px 100px 0;
+  position: relative;
+}
+
+.footer-bg::after {
+  content: '';
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(../imagens/deco.svg) no-repeat center;
+  position: absolute;
+  top: -50px;
+  right: 100px;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-bg h2 {
+  font-family: "pridi", Arial, Helvetica, sans-serif;
+  font-size: 3em;
+  margin-bottom: 48px;
+}
+
+.footer-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-start;
+}
+
+.footer-info h3 {
+  font-family: "poppins", Arial, sans-serif;
+  font-size: 1.4em;
+  margin-bottom: 24px;
+}
+
+.footer-info h4 {
+  font-family: "poppins", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #D2DADE;
+}
+
+.contato-icones {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #f3f3f3;
+  font-family: "poppins", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/* Remove apenas o hover dos ícones de contato */
+.contato-item:hover,
+.contato-item:focus,
+.contato-item:active {
+  color: #f3f3f3;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.contato-item img {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
+.footer-info ul {
+  padding: 0;
+}
+
+.footer-info li {
+  margin-bottom: 12px;
+}
+
+.footer-info ul li a {
+  color: #D2DADE;
+  font-family: "poppins", Arial, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.footer-info ul li a:hover {
+  color: #fbfbfb;
+  font-weight: 700;
+}
+
+.footer-info .footer-col:nth-child(2) {
+  padding-left: 120px;
+}
+
+.logo-footer {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.simetrica-copy {
+  text-align: center;
+  font-family: "poppins", Arial, sans-serif;
+  font-size: 0.9em;
+  color: #bbc1c5;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .footer-bg {
+    padding: 48px 50px 0;
   }
 
-  .footer-bg::after {
-    content: '';
-    display: block;
-    width: 130px;
-    height: 100px;
-    background: url(../imagens/deco.svg) no-repeat center;
-    position: absolute;
-    top: -50px;
-    right: 100px;
-  }
-  
-  .footer-grid {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .footer-content {
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  .footer-bg h2 {
-    font-family: "pridi", Arial, Helvetica, sans-serif;
-    font-size: 3em;
-    margin-bottom: 48px;
-  }
-
-  
   .footer-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: px;
-    align-items: flex-start;
-  }
-  
-  .footer-info h3 {
-    font-family: "poppins", Arial, sans-serif;
-    font-size: 1.4em;
-    margin-bottom: 24px;
-  }
-  
-  .footer-info h4 {
-    font-family: "poppins", Arial, sans-serif;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 1.4;
-    color: #D2DADE;
-  }
-  
-  .contato-icones {
-    display: flex;
-    gap: 24px;
-    margin-bottom: 36px;
-    flex-wrap: wrap;
-  }
-  
-  .contato-icones img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .footer-info ul {
-    padding: 0;
-  }
-  
-  .footer-info li {
-    margin-bottom: 12px;
-  }
-  
-  .footer-info a {
-    color: #D2DADE;
-    font-family: "poppins", Arial, sans-serif;
-    font-size: 1em;
-  }
-
-  .footer-info a:hover {
-    color: #fbfbfb;
-    font-weight: 700;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .footer-info .footer-col:nth-child(2) {
-    padding-left: 120px; /* Você pode ajustar esse valor para mais/menos centralização */
-}
+    padding-left: 0px;
+  }
 
   .logo-footer {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  .simetrica-copy {
-    text-align: center;
-    font-family: "poppins", Arial, sans-serif;
-    font-size: 0.9em;
-    color: #bbc1c5;
-    margin: 10px auto;
-    padding-bottom: 20px;
-    margin-bottom: 0;
-  }
-  
-  /* Responsivo */
-  @media (max-width: 800px) {
-    .footer-bg {
-      padding: 48px 50px 0;
-    }
-  
-    .footer-info {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .footer-info .footer-col:nth-child(2) {
-        padding-left: 0px; /* Você pode ajustar esse valor para mais/menos centralização */
-    }
-  
-    .logo-footer {
-      margin: 32px auto 0;
-    }
-  
-    .contato-icones {
-      justify-content: center;
-    }
-  
+    margin: 32px auto 0;
   }
 
-  @media (max-width: 600px) {
-  .footer-bg::after{
-    display: none;
+  .contato-icones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .contato-item {
+    flex-direction: row;
+    font-size: 1em;
+    font-weight: normal;
+    gap: 12px;
+    text-indent: 0;
+    width: auto;
+  }
+
+  .contato-item img {
+    width: 36px;
+    height: 36px;
   }
 }
 
-  @media (max-width: 480px) {
-    .footer-bg {
-      padding: 32px 30px 0;
-    }
-
-    .logo-footer {
-        margin-bottom: 32px;
-    }
-  
-    .footer-bg h2 {
-      font-size: 2em;
-      text-align: center;
-    }
-  
-    .footer-info h3 {
-      font-size: 1.2em;
-    }
-  
-    .contato-icones img {
-      width: 28px;
-      height: 28px;
-    }
+@media (max-width: 750px) {
+  .footer-bg::after {
+    display: none;
   }
 
+  .contato-icones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  .contato-item {
+    font-size: 0;
+    width: auto;
+    gap: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .contato-item img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-bg {
+    padding: 32px 30px 0;
+  }
+
+  .logo-footer {
+    margin-bottom: 32px;
+  }
+
+  .footer-bg h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .footer-info h3 {
+    font-size: 1.2em;
+  }
+
+  .contato-item img {
+    width: 28px;
+    height: 28px;
+  }
+}

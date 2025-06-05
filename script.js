@@ -35,7 +35,7 @@ document.querySelectorAll('.carrossel').forEach(carrossel => {
   });
 });
 
-// Expansão de imagem em fullscreen
+// Expansão de imagem em fullscreen (com drag e teclado)
 function expandImage(img) {
   const fullscreen = document.createElement('div');
   fullscreen.style = `
@@ -67,10 +67,7 @@ function expandImage(img) {
     font-size: 2em; background: none; border: none;
     color: #fff; cursor: pointer;
   `;
-  prevButton.addEventListener('click', () => {
-    const prevImage = currentImage.previousElementSibling || images[images.length - 1];
-    changeImage(prevImage);
-  });
+  prevButton.addEventListener('click', showPrevImage);
 
   const nextButton = document.createElement('button');
   nextButton.textContent = '❯';
@@ -80,10 +77,17 @@ function expandImage(img) {
     font-size: 2em; background: none; border: none;
     color: #fff; cursor: pointer;
   `;
-  nextButton.addEventListener('click', () => {
+  nextButton.addEventListener('click', showNextImage);
+
+  function showPrevImage() {
+    const prevImage = currentImage.previousElementSibling || images[images.length - 1];
+    changeImage(prevImage);
+  }
+
+  function showNextImage() {
     const nextImage = currentImage.nextElementSibling || images[0];
     changeImage(nextImage);
-  });
+  }
 
   fullscreen.innerHTML = `
     <img src="${img.src}" 
@@ -97,11 +101,45 @@ function expandImage(img) {
 
   fullscreen.addEventListener('click', (e) => {
     if (e.target === fullscreen) {
-      document.body.removeChild(fullscreen);
+      closeFullscreen();
     }
   });
 
   document.body.appendChild(fullscreen);
+
+  function closeFullscreen() {
+    document.body.removeChild(fullscreen);
+    document.removeEventListener('keydown', handleKey);
+  }
+
+  // Navegação com teclado
+  function handleKey(e) {
+    if (e.key === 'ArrowLeft') showPrevImage();
+    if (e.key === 'ArrowRight') showNextImage();
+    if (e.key === 'Escape') closeFullscreen();
+  }
+  document.addEventListener('keydown', handleKey);
+
+  // Drag com mouse
+  let startX = 0;
+  let isDragging = false;
+
+  fullscreen.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+    isDragging = true;
+  });
+
+  fullscreen.addEventListener('mouseup', (e) => {
+    if (!isDragging) return;
+    const diffX = e.clientX - startX;
+    if (diffX > 50) showPrevImage();
+    if (diffX < -50) showNextImage();
+    isDragging = false;
+  });
+
+  fullscreen.addEventListener('mousemove', (e) => {
+    if (isDragging) e.preventDefault();
+  });
 }
 
 // Animações
