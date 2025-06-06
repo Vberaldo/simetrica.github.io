@@ -12,8 +12,7 @@ img {
   padding: 0;
   list-style: none;
   text-decoration: none;
-  box-sizing: border-box;
-  /* para evitar problemas de corte */
+  box-sizing: border-box; /* para evitar problemas de corte */
 }
 
 img {
@@ -71,8 +70,7 @@ span {
   flex-wrap: nowrap;
   gap: 48px;
   transition: transform 0.3s ease, filter 0.3s ease;
-  overflow: visible;
-  /* evita corte das imagens */
+  overflow: visible; /* evita corte das imagens */
 }
 
 .projetos-imglogo img:hover {
@@ -242,12 +240,10 @@ p {
     transform: scale(1);
     opacity: 1;
   }
-
   50% {
     transform: scale(1.2);
     opacity: 0.7;
   }
-
   100% {
     transform: scale(1);
     opacity: 1;
@@ -388,14 +384,13 @@ p {
     top: 50%;
     transform: translateY(-50%);
   }
-
   .vejamais {
     font-size: 0.8em;
     padding: 10px 12px;
     max-width: 200px;
     margin: 20px auto;
     display: block;
-  }
+}
 }
 
 @media (max-width: 440px) {
@@ -442,10 +437,9 @@ p {
   .next {
     right: 5px;
   }
-
-  .vejamais {
+.vejamais {
     font-size: 0.75em;
     padding: 8px 10px;
     max-width: 180px;
-  }
+}
 }
