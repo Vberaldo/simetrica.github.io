@@ -17,28 +17,43 @@
 
 <body>
 
-  <header class="header-bg" id="inicio">
+ <header class="header-bg" id="inicio">
 
-    <div class="header-nav">
-      <div class="header-logo">
-        <img src="./imagens/Logo-header.svg" alt="Logo Simétrica">
-      </div>
-
-      <nav class="header-links" id="#inicio">
-        <ul>
-          <li><a href="#projetos">Projetos<span>.</span></a></li>
-          <li><a href="#servicos">Serviços<span>.</span></a></li>
-          <li><a href="#sobrenos">Sobre<span>.</span></a></li>
-          <li><a href="#contato">Contato<span>.</span></a></li>
-        </ul>
-      </nav>
+  <div class="header-nav">
+    <div class="header-logo">
+      <img src="./imagens/Logo-header.svg" alt="Logo Simétrica">
     </div>
 
+    <nav class="header-links" id="desktop-menu">
+      <ul>
+        <li><a href="#projetos">Projetos<span>.</span></a></li>
+        <li><a href="#servicos">Serviços<span>.</span></a></li>
+        <li><a href="#sobrenos">Sobre<span>.</span></a></li>
+        <li><a href="#contato">Contato<span>.</span></a></li>
+      </ul>
+    </nav>
 
-    <h1 class="header-titulo">
-      Projetamos o invisível, <br>Construímos o inesquecível<span>.</span>
-    </h1>
-  </header>
+    <!-- Botão hamburguer -->
+    <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" tabindex="0" role="button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Menu mobile em bloco -->
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#projetos">Projetos<span>.</span></a>
+    <a href="#servicos">Serviços<span>.</span></a>
+    <a href="#sobrenos">Sobre<span>.</span></a>
+    <a href="#contato">Contato<span>.</span></a>
+  </nav>
+
+  <h1 class="header-titulo">
+    Projetamos o invisível, <br>Construímos o inesquecível<span>.</span>
+  </h1>
+</header>
+
 
 
   <section id="projetos" class="projetos-bg">
@@ -354,7 +369,7 @@
         </div>
         <div class="info">
           <h3>Tortorella</h3>
-          <h4>Área: 1.200²</h4>
+          <h4>Área: 1.200m²</h4>
           <p>Com mais de 1.000m² dedicados ao design e à funcionalidade, a Tortorella é um espaço que une bom gosto,
             inovação e praticidade. Pensada para atender um público exigente e de bom senso estético, a loja oferece um
             ambiente moderno e acolhedor, onde cada detalhe foi planejado para tornar a experiência de compra mais
@@ -445,38 +460,31 @@
 
 
   <section class="sobrenos-bg" id="sobrenos">
-    <h2 class="sobre-titulo">Sobre Nós<span>.</span></h2>
+  <h2 class="sobre-titulo">Sobre Nós<span>.</span></h2>
 
-    <div class="sobrenos-conteudo">
-
-
-      <div class="sobrenos-imagens">
-        <div class="pessoa">
-          <img src="./imagens/SobreNós/gustavo2.svg" alt="Foto Gustavo Freitas">
-          <h2>Gustavo Freitas</h2>
-        </div>
-        <div class="pessoa">
-          <img src="./imagens/SobreNós/andre2.svg" alt="Foto André Freitas">
-          <h2>André Freitas</h2>
-        </div>
+  <div class="sobrenos-conteudo">
+    <div class="sobrenos-imagens">
+      <div class="pessoa">
+        <img src="./imagens/SobreNós/gustavo2.svg" alt="Foto Gustavo Freitas">
+        <h2>Gustavo Freitas</h2>
       </div>
-
-      <div class="sobrenos-texto">
-        <p>
-          A Simétrica é o resultado da união entre experiência e inovação. Fundada por André Freitas e seu filho Gustavo
-          Freitas, a empresa surgiu com o propósito de oferecer soluções arquitetônicas que realmente atendessem às
-          necessidades dos clientes, aliando funcionalidade, estética e praticidade.<br><br>
-          Desde o início, a Simétrica teve como foco principal o desenvolvimento de projetos para supermercados e lojas
-          de material de construção, setores que exigem eficiência, organização e atenção aos detalhes. Com o tempo,
-          expandimos nosso portfólio, sempre mantendo o compromisso com a qualidade e a personalização de cada
-          projeto.<br><br>
-          Mais do que criar espaços, buscamos entregar experiências. Cada traço carrega a dedicação de uma equipe
-          apaixonada pelo que faz. Na Simétrica, acreditamos que a arquitetura transforma, conecta e impulsiona negócios
-          — e é exatamente isso que nos move todos os dias.
-        </p>
+      <div class="pessoa">
+        <img src="./imagens/SobreNós/andre2.svg" alt="Foto André Freitas">
+        <h2>André Freitas</h2>
       </div>
     </div>
-  </section>
+
+    <div class="sobrenos-texto">
+      <p>
+        A Simétrica é o resultado da união entre experiência e inovação. Fundada por André Freitas e seu filho Gustavo Freitas, a empresa surgiu com o propósito de oferecer soluções arquitetônicas que realmente atendessem às necessidades dos clientes, aliando funcionalidade, estética e praticidade. <br><br>
+
+Desde o início, a Simétrica teve como foco principal o desenvolvimento de projetos para supermercados e lojas de material de construção, setores que exigem eficiência, organização e atenção aos detalhes. Com o tempo, expandimos nosso portfólio, sempre mantendo o compromisso com a qualidade e a personalização de cada projeto. <br><br>
+
+Mais do que criar espaços, buscamos entregar experiências. Cada traço carrega a dedicação de uma equipe apaixonada pelo que faz. Na Simétrica, acreditamos que a arquitetura transforma, conecta e impulsiona negócios — e é exatamente isso que nos move todos os dias. <br><br>
+      </p>
+    </div>
+  </div>
+</section>
 
   <footer class="footer-bg">
     <h2>Contato<span>.</span></h2>

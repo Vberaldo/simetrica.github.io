@@ -98,4 +98,7 @@ h5 {
     padding-top: 16px;
     margin-bottom: 24px;
   }
+  .servicos p {
+    font-size: 1em;
+  }
 }

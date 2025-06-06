@@ -24,6 +24,7 @@
   padding-top: 16px;
   margin-bottom: 24px;
   margin-left: 100px;
+  text-align: left;
 }
 
 .sobrenos-conteudo {
@@ -34,12 +35,13 @@
 }
 
 .sobrenos-imagens {
-  display: flex;
+   display: flex;
   justify-content: center;
   gap: 96px;
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
+
 
 .pessoa {
   text-align: center;
@@ -70,19 +72,32 @@
   transform: translateX(-50%);
 }
 
-/* === RESPONSIVO === */
+@media (min-width: 801px) {
+  .sobrenos-imagens {
+    margin-top: -60px;
+  }
+}
 
 @media (max-width: 800px) {
+  .sobrenos-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .sobre-titulo {
+    order: -1;
+    width: 100%;
     font-size: 2.4em;
     text-align: center;
     margin-left: 0;
-    padding-top: 0;        /* Reduzido para alinhar com "Contato" */
-    margin-bottom: 20px;
+    padding-top: 0;
+    margin-bottom: 46px;
   }
 
   .sobrenos-imagens {
     gap: 48px;
+    margin-top: 0;
   }
 
   .pessoa img {
@@ -102,7 +117,6 @@
 @media (max-width: 600px) {
   .sobre-titulo {
     font-size: 2em;
-    padding-top: 0;
     margin-bottom: 16px;
   }
 
@@ -130,7 +144,6 @@
 @media (max-width: 400px) {
   .sobre-titulo {
     font-size: 1.6em;
-    padding-top: 0;
     margin-bottom: 12px;
   }
 

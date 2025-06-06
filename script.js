@@ -9,6 +9,19 @@ links.forEach(scroll => {
   });
 });
 
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  if (mobileMenu.style.display === "flex") {
+    mobileMenu.style.display = "none";
+  } else {
+    mobileMenu.style.display = "flex";
+  }
+});
+
+
+
 // Ativa carrossel para todos os blocos
 document.querySelectorAll('.carrossel').forEach(carrossel => {
   let index = 0;
