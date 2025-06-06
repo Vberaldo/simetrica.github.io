@@ -1,3 +1,17 @@
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url(../imagens/img-home.webp) center center no-repeat;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
 body, nav, li, ul, a, h2, h3, p, img, ol {
   margin: 0;
   padding: 0;
@@ -31,7 +45,7 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85vw;
+  width: 90vw;
   max-width: 1200px;
   padding: 10px 30px;
   margin: 30px auto 0;
@@ -44,7 +58,7 @@ span {
 
 
 .header-logo img {
-  max-width: 120px;
+  max-width: 140px;
   height: auto;
 }
 
@@ -134,6 +148,11 @@ span {
 
 
 @media (max-width: 600px) {
+
+  .header-nav{
+    max-width: 85vw;
+  }
+
   .header-links {
     display: none;
   }
@@ -166,5 +185,8 @@ span {
 @media (max-width: 480px) {
   .header-titulo {
     font-size: 1.6em;
+  }
+  .header-nav{
+    max-width: 85vw;
   }
 }
