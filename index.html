@@ -17,65 +17,90 @@
 
 <body>
 
- <header class="header-bg" id="inicio">
+  <header class="header-bg" id="inicio">
 
-  <div class="header-nav">
-    <div class="header-logo">
-      <img src="./imagens/Logo-header.svg" alt="Logo Simétrica">
+    <div class="header-nav">
+      <div class="header-logo">
+        <img src="./imagens/Logo-header.svg" alt="Logo Simétrica">
+      </div>
+
+      <nav class="header-links" id="desktop-menu">
+        <ul>
+          <li><a href="#projetos">Projetos<span>.</span></a></li>
+          <li><a href="#servicos">Serviços<span>.</span></a></li>
+          <li><a href="#sobrenos">Sobre<span>.</span></a></li>
+          <li><a href="#contato">Contato<span>.</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Botão hamburguer -->
+      <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" tabindex="0" role="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
 
-    <nav class="header-links" id="desktop-menu">
-      <ul>
-        <li><a href="#projetos">Projetos<span>.</span></a></li>
-        <li><a href="#servicos">Serviços<span>.</span></a></li>
-        <li><a href="#sobrenos">Sobre<span>.</span></a></li>
-        <li><a href="#contato">Contato<span>.</span></a></li>
-      </ul>
+    <nav class="mobile-menu" id="mobile-menu">
+      <a href="#projetos">Projetos<span>.</span></a>
+      <a href="#servicos">Serviços<span>.</span></a>
+      <a href="#sobrenos">Sobre<span>.</span></a>
+      <a href="#contato">Contato<span>.</span></a>
     </nav>
 
-    <!-- Botão hamburguer -->
-    <div class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" tabindex="0" role="button">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
-  <nav class="mobile-menu" id="mobile-menu">
-    <a href="#projetos">Projetos<span>.</span></a>
-    <a href="#servicos">Serviços<span>.</span></a>
-    <a href="#sobrenos">Sobre<span>.</span></a>
-    <a href="#contato">Contato<span>.</span></a>
-  </nav>
-
-  <h1 class="header-titulo">
-    Projetamos o invisível, <br>Construímos o inesquecível<span>.</span>
-  </h1>
-</header>
-
-
+    <h1 class="header-titulo">
+      Projetamos o invisível, <br>Construímos o inesquecível<span>.</span>
+    </h1>
+  </header>
 
   <section id="projetos" class="projetos-bg">
     <div class="projetos-grid">
       <h2 class="projetos-titulo">Projetos<span>.</span></h2>
 
 
-      <div class="projetos-imglogo js-tabmenu">
-        <img src="./imagens/Logo Lojas Conteudo/Logo Casas São José.svg" class="active" data-tab="0"
-          alt="Logo Casas São José" width="100" height="100">
-        <img src="./imagens/Logo Lojas Conteudo/Logo Construagro.svg" data-tab="1" alt="Construagro" width="100"
-          height="100">
-        <img src="./imagens/Logo Lojas Conteudo/Logo Wilson.svg" data-tab="1" alt="Guemat" width="100" height="100">
-        <img src="./imagens/Logo Lojas Conteudo/Logo Freitas.svg" data-tab="1" alt="nissei" width="100" height="100">
-        <img src="./imagens/Logo Lojas Conteudo/Logo Guadalarrara.svg" data-tab="1" alt="São Luiz" width="100"
-          height="100">
-        <img src="./imagens/Logo Lojas Conteudo/Logo LarShop.svg" data-tab="1" alt="Tijotel" width="100" height="100">
-        <img src="./imagens/Logo Lojas Conteudo/Logo Tortorella.svg" data-tab="1" alt="Tortorella" width="100"
-          height="100">
-        <img src="./imagens/Logo Lojas Conteudo/Logo Litoral.svg" data-tab="1" alt="Logo Capifer" width="100"
-          height="100">
+      <div class="carrossel-logos">
+        <button class="logo-voltar">❮</button>
+        <div class="projetos-imglogo js-tabmenu">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Casas São José.svg" class="active" data-tab="0"
+            alt="Logo Casas São José" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Construagro.svg" data-tab="1" alt="Construagro" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Wilson.svg" data-tab="2" alt="Guemat" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Freitas.svg" data-tab="3" alt="nissei" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Guadalarrara.svg" data-tab="4" alt="São Luiz" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo LarShop.svg" data-tab="5" alt="Tijotel" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Tortorella.svg" data-tab="6" alt="Tortorella" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Litoral.svg" data-tab="7" alt="Capifer" width="100" height="100">
 
+          <!-- A partir daqui aparecem apenas ao clicar -->
+          <img src="./imagens/Logo Lojas Conteudo/Logo Guadalarrara.svg" data-tab="4" alt="São Luiz" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo LarShop.svg" data-tab="5" alt="Tijotel" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Tortorella.svg" data-tab="6" alt="Tortorella" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Casas São José.svg" class="active" data-tab="0"
+            alt="Logo Casas São José" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Construagro.svg" data-tab="1" alt="Construagro" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Wilson.svg" data-tab="2" alt="Guemat" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Guadalarrara.svg" data-tab="4" alt="São Luiz" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo LarShop.svg" data-tab="5" alt="Tijotel" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Tortorella.svg" data-tab="6" alt="Tortorella" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Tortorella.svg" data-tab="6" alt="Tortorella" width="100"
+            height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Casas São José.svg" class="active" data-tab="0"
+            alt="Logo Casas São José" width="100" height="100">
+          <img src="./imagens/Logo Lojas Conteudo/Logo Construagro.svg" data-tab="1" alt="Construagro" width="100"
+            height="100">
+
+        </div>
+        <button class="logo-avancar">❯</button>
       </div>
+
 
       <div class="tab-item active">
         <div class="container">
@@ -422,6 +447,534 @@
             COMPLETO</a>
         </div>
       </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 9 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 10 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 11 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 12 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 13 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 14 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 15 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 16 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 17 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 18 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 19 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
+
+      <div class="tab-item">
+        <div class="container">
+          <div class="carrossel">
+            <button class="prev">❮</button>
+            <div class="slide">
+              <img src="./imagens/Fotos Projetos/Litoral/1.webp" alt="Imagem 1" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/2.webp" alt="Imagem 2" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/3.webp" alt="Imagem 3" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/4.webp" alt="Imagem 4" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/5.webp" alt="Imagem 5" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/6.webp" alt="Imagem 6" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/7.webp" alt="Imagem 7" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/8.webp" alt="Imagem 8" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/9.webp" alt="Imagem 9" class="active"
+                onclick="expandImage(this)">
+              <img src="./imagens/Fotos Projetos/Litoral/10.webp" alt="Imagem 10" class="active"
+                onclick="expandImage(this)">
+            </div>
+            <button class="next">❯</button>
+          </div>
+        </div>
+        <div class="info">
+          <h3>Loja 20 Teste
+          </h3>
+          <h4>Área: 1.200m²</h4>
+          <p>Com 1200m² de design e funcionalidade, a Capifer é um projeto que une estética, inovação e praticidade.
+            Pensada para atender às necessidades de um público exigente, a loja oferece um ambiente moderno e eficiente,
+            onde cada detalhe foi cuidadosamente planejado para facilitar a jornada do cliente. A Capifer se destaca não
+            apenas pela variedade e qualidade dos materiais de construção disponíveis, mas também pelo compromisso em
+            oferecer um atendimento humanizado e uma estrutura que valoriza o tempo e o conforto de quem a visita.</p>
+          <br><br> <a class="vejamais" href="https://www.youtube.com/watch?v=VW3hre8b0D4" target="_blank">PROJETO
+            COMPLETO</a>
+        </div>
+      </div>
+
     </div>
     </div>
   </section>
@@ -459,31 +1012,38 @@
 
 
   <section class="sobrenos-bg" id="sobrenos">
-  <h2 class="sobre-titulo">Sobre Nós<span>.</span></h2>
+    <h2 class="sobre-titulo">Sobre Nós<span>.</span></h2>
 
-  <div class="sobrenos-conteudo">
-    <div class="sobrenos-imagens">
-      <div class="pessoa">
-        <img src="./imagens/SobreNós/gustavo2.svg" alt="Foto Gustavo Freitas">
-        <h2>Gustavo Freitas</h2>
+    <div class="sobrenos-conteudo">
+      <div class="sobrenos-imagens">
+        <div class="pessoa">
+          <img src="./imagens/SobreNós/gustavo2.svg" alt="Foto Gustavo Freitas">
+          <h2>Gustavo Freitas</h2>
+        </div>
+        <div class="pessoa">
+          <img src="./imagens/SobreNós/andre2.svg" alt="Foto André Freitas">
+          <h2>André Freitas</h2>
+        </div>
       </div>
-      <div class="pessoa">
-        <img src="./imagens/SobreNós/andre2.svg" alt="Foto André Freitas">
-        <h2>André Freitas</h2>
+
+      <div class="sobrenos-texto">
+        <p>
+          A Simétrica é o resultado da união entre experiência e inovação. Fundada por André Freitas e seu filho Gustavo
+          Freitas, a empresa surgiu com o propósito de oferecer soluções arquitetônicas que realmente atendessem às
+          necessidades dos clientes, aliando funcionalidade, estética e praticidade. <br><br>
+
+          Desde o início, a Simétrica teve como foco principal o desenvolvimento de projetos para supermercados e lojas
+          de material de construção, setores que exigem eficiência, organização e atenção aos detalhes. Com o tempo,
+          expandimos nosso portfólio, sempre mantendo o compromisso com a qualidade e a personalização de cada projeto.
+          <br><br>
+
+          Mais do que criar espaços, buscamos entregar experiências. Cada traço carrega a dedicação de uma equipe
+          apaixonada pelo que faz. Na Simétrica, acreditamos que a arquitetura transforma, conecta e impulsiona negócios
+          — e é exatamente isso que nos move todos os dias. <br><br>
+        </p>
       </div>
     </div>
-
-    <div class="sobrenos-texto">
-      <p>
-        A Simétrica é o resultado da união entre experiência e inovação. Fundada por André Freitas e seu filho Gustavo Freitas, a empresa surgiu com o propósito de oferecer soluções arquitetônicas que realmente atendessem às necessidades dos clientes, aliando funcionalidade, estética e praticidade. <br><br>
-
-Desde o início, a Simétrica teve como foco principal o desenvolvimento de projetos para supermercados e lojas de material de construção, setores que exigem eficiência, organização e atenção aos detalhes. Com o tempo, expandimos nosso portfólio, sempre mantendo o compromisso com a qualidade e a personalização de cada projeto. <br><br>
-
-Mais do que criar espaços, buscamos entregar experiências. Cada traço carrega a dedicação de uma equipe apaixonada pelo que faz. Na Simétrica, acreditamos que a arquitetura transforma, conecta e impulsiona negócios — e é exatamente isso que nos move todos os dias. <br><br>
-      </p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <footer class="footer-bg">
     <h2>Contato<span>.</span></h2>
@@ -491,32 +1051,33 @@ Mais do que criar espaços, buscamos entregar experiências. Cada traço carrega
       <div class="footer-content">
         <div class="footer-info">
           <div class="footer-col">
-  <div class="contato-titulo">
-    <h3>Fale Conosco<span>.</span></h3>
-  </div>
+            <div class="contato-titulo">
+              <h3>Fale Conosco<span>.</span></h3>
+            </div>
 
-  <div class="contato-icones">
-    <a href="https://wa.me/5511999999999" target="_blank" class="contato-item">
-      <img src="./imagens/Rodapé/Icones Rodapé/Whatsapp.svg" alt="WhatsApp">
-      WhatsApp
-    </a>
-    <a href="https://www.instagram.com/simetrica.projetos/" target="_blank" class="contato-item">
-      <img src="./imagens/Rodapé/Icones Rodapé/Instagram.svg" alt="Instagram">
-      Instagram
-    </a>
-    <a href="mailto:simetricaprojetos@gmail.com?subject=Orçamento&body=Olá, gostaria de um orçamento." target="_blank" class="contato-item">
-      <img src="./imagens/Rodapé/Icones Rodapé/GMail.svg" alt="E-mail">
-      simetricaprojetos@gmail.com
-    </a>
-    <a href="tel:+5511999999999" class="contato-item">
-      <img src="./imagens/Rodapé/Icones Rodapé/Telefone.svg" alt="Telefone">
-      Telefone
-    </a>
-  </div>
+            <div class="contato-icones">
+              <a href="https://wa.me/5511999999999" target="_blank" class="contato-item">
+                <img src="./imagens/Rodapé/Icones Rodapé/Whatsapp.svg" alt="WhatsApp">
+                WhatsApp
+              </a>
+              <a href="https://www.instagram.com/simetrica.projetos/" target="_blank" class="contato-item">
+                <img src="./imagens/Rodapé/Icones Rodapé/Instagram.svg" alt="Instagram">
+                Instagram
+              </a>
+              <a href="mailto:simetricaprojetos@gmail.com?subject=Orçamento&body=Olá, gostaria de um orçamento."
+                target="_blank" class="contato-item">
+                <img src="./imagens/Rodapé/Icones Rodapé/GMail.svg" alt="E-mail">
+                simetricaprojetos@gmail.com
+              </a>
+              <a href="tel:+5511999999999" class="contato-item">
+                <img src="./imagens/Rodapé/Icones Rodapé/Telefone.svg" alt="Telefone">
+                Telefone
+              </a>
+            </div>
 
-  <h3>Localização<span>.</span></h3>
-  <h4>Rua: Padre João Manoel da Silva, 249 <br> Nova América Piracicaba-SP</h4>
-</div>
+            <h3>Localização<span>.</span></h3>
+            <h4>Rua: Padre João Manoel da Silva, 249 <br> Nova América Piracicaba-SP</h4>
+          </div>
 
 
           <div class="footer-col">
@@ -541,6 +1102,7 @@ Mais do que criar espaços, buscamos entregar experiências. Cada traço carrega
   </footer>
 
   <script src="./script.js"></script>
+  <script src="./scriptLogo.js"></script>
 
 </body>
 

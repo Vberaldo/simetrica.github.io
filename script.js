@@ -5,24 +5,27 @@ links.forEach(scroll => {
     e.preventDefault();
     const targetId = scroll.getAttribute('href');
     const targetSection = document.querySelector(targetId);
-    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if(targetSection) {
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   });
 });
 
+// Menu mobile toggle
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
-menuToggle.addEventListener("click", () => {
-  if (mobileMenu.style.display === "flex") {
-    mobileMenu.style.display = "none";
-  } else {
-    mobileMenu.style.display = "flex";
-  }
-});
+if(menuToggle && mobileMenu){
+  menuToggle.addEventListener("click", () => {
+    if (mobileMenu.style.display === "flex") {
+      mobileMenu.style.display = "none";
+    } else {
+      mobileMenu.style.display = "flex";
+    }
+  });
+}
 
-
-
-// Ativa carrossel para todos os blocos
+// Carrossel dos slides (seu JS original)
 document.querySelectorAll('.carrossel').forEach(carrossel => {
   let index = 0;
   const slides = carrossel.querySelectorAll('.slide img');
@@ -37,18 +40,18 @@ document.querySelectorAll('.carrossel').forEach(carrossel => {
 
   showSlide(index);
 
-  prevBtn.addEventListener('click', () => {
+  prevBtn?.addEventListener('click', () => {
     index = (index - 1 + slides.length) % slides.length;
     showSlide(index);
   });
 
-  nextBtn.addEventListener('click', () => {
+  nextBtn?.addEventListener('click', () => {
     index = (index + 1) % slides.length;
     showSlide(index);
   });
 });
 
-// Expansão de imagem em fullscreen (com drag e teclado)
+// Expansão de imagem fullscreen
 function expandImage(img) {
   const fullscreen = document.createElement('div');
   fullscreen.style = `
@@ -221,3 +224,34 @@ function initializeSwipes() {
 
 // Inicialização inicial
 initializeSwipes();
+
+// === NOVO: Controle dos botões do carrossel de logos
+(function(){
+  const carrossel = document.getElementById('carrossel-logos');
+  if(!carrossel) return;
+
+  const btnVolta = carrossel.querySelector('.volta');
+  const btnAvanca = carrossel.querySelector('.avanca');
+  const scrollAmount = 150;
+
+  function atualizarBotoes() {
+    btnVolta.style.display = carrossel.scrollLeft > 0 ? 'block' : 'none';
+    btnAvanca.style.display = (carrossel.scrollLeft + carrossel.clientWidth) < carrossel.scrollWidth ? 'block' : 'none';
+  }
+
+  atualizarBotoes();
+
+  btnVolta.addEventListener('click', () => {
+    carrossel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    setTimeout(atualizarBotoes, 300);
+  });
+
+  btnAvanca.addEventListener('click', () => {
+    carrossel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    setTimeout(atualizarBotoes, 300);
+  });
+
+  carrossel.addEventListener('scroll', () => {
+    atualizarBotoes();
+  });
+})();
